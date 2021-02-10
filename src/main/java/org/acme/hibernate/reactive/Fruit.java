@@ -1,6 +1,7 @@
 package org.acme.hibernate.reactive;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,6 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Data
+@ToString
 @Table(name = "known_fruits")
 @NamedQuery(name = Fruit.FIND_ALL, query = "SELECT f FROM Fruit f ORDER BY f.name")
 public class Fruit {
@@ -32,8 +34,4 @@ public class Fruit {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Fruit{" + id + "," + name + '}';
-    }
 }

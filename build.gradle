@@ -24,6 +24,7 @@ dependencies {
 	testImplementation "io.quarkus:quarkus-junit5:$quarkusVersion"
 	testImplementation "io.rest-assured:rest-assured:4.3.3"
 	compileOnly 'org.projectlombok:lombok:1.18.18'
+	annotationProcessor 'org.projectlombok:lombok:1.18.18'
 }
 
 tasks.withType(JavaCompile) {
